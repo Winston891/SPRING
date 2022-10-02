@@ -1,0 +1,302 @@
+(Session-007)
+
+POJO Class : 
+
+      --> A Java Class which implements or extends only Predefined Libraries 
+      of Java Programming Language and doesn't implement or extends 
+      Predefined Libraries of any other Technology or Framework is known as 
+      POJO Class.
+
+Note : 1.POJO Class are not against inheritance or implementing interfaces,they are
+	against extending and Implementing Technology/Framework API Specific Class and
+	Interface.
+
+	2.POJO Class can hold pre-defined methods/logics of technolgy and
+	framework.
+
+	3.Annotations can be provided for POJO Class
+
+	4.A Framework/Technology is said to be non-invasive only when its
+	class are POJO Class
+
+POJI[Plain Old Java Interface] :
+
+	--> A Java Interface which extends only Predefined Libraries 
+      of Java Programming Language and doesn't extends 
+      Predefined Libraries of any other Technology or Framework is known as 
+      POJO Class.
+
+Note : 1.POJI Interface are not against inheritance or extending interfaces,they are
+	against extending Technology/Framework API.
+
+       2.Annotations can be provided for POJI Interface.
+
+       3.POJI Interface can hold pre-defined methods/logics of technolgy and
+	framework.
+
+(Session-008)
+
+Java Bean Class
+---------------
+
+	1.The Java Class which is developed by following some special standards
+	is Java Bean Class.
+
+	Standards to be Followed
+	------------------------
+
+		a.Class scope must be public.
+		b.Recommended to implement "java.io.Serializable"
+		c.Class must have private and non-static variables[properties]
+		d.Every Java Bean[Class] must have one getter and setter method
+		e.Should have Public 0-Param Constructor Directly or Indirectly
+	
+	2.Java Bean Class is always as Helper Class,which is used to Carry
+	Multiple Values as Single Objects between
+	
+		1.Two Layer/Components of Same Java Application
+		Eg : Service Class[Business Logic] sends Multiple values to
+		     DAO Class[Persistence Logic] in form of Java Bean Class
+		     Object within the Application
+		
+			or
+		
+		2.Two Different Java Applications over network
+
+		Eg : Flipkart.com sends credit/debit card details to Paypall
+		in form of Java Bean Class Objects.
+
+	3.Java Bean Class doesn't contain methods with business logic because
+	it is always used as Helper Class.
+
+
+FAQ : Why Designing a Java Method with more than 3 parameters is a bad practice?
+
+Ans : R-1 : No.of.Arguments must be remembered
+      R-2 : Order of Arguments must be remembered
+      R-3 : Arguments values cannot be ignored
+      R-4 : Arguments type must be remembered
+      R-5 : If we don't pass value for arguments then default value cannot
+	    be stored
+
+FAQ : What If I pass Java Bean Class Reference as parameter?
+
+Ans : R-1 : Order of properties need not be remembered,because data
+	    can be set to Java Bean Class Object in any order.
+      R-2 : No.of.properties need to not to be remembered because Java
+	    Bean Class Object can hold multiple value.
+      R-3 : Assigning values to properties of Java Bean Class can be
+	    ignored
+      R-4 : Since Setter and Getter Methods describes type of properties,hence
+	    it is not required to remember type of properties
+      R-5 : If we don't pass value for properties then default value is
+	    stored by default.
+
+Notes : Every Java Bean Class is a POJO Class but Every POJO Class cannot
+	be Java Bean Class
+
+
+(Session-009)
+
+Bean Class/Component Class : A Java Class that has a State [Non-Static Member
+Variables] and Behaviours[methods] where as the state must be used inside
+Business Logics of Behaviour[methods] is known as Bean/Component Class.
+
+Note : Bean Class <-- Named By Sun Microsystems
+       Component Class <-- Named By Microsoft 
+
+Example For Bean Class/Component Class :
+
+	//Bean Class/Component Class
+	public class BankOperations{
+		//state
+		private String bankName;
+		private String bankBranch;
+		private String bankBranchId;
+		private String bankBranchIfsc;
+
+		//behaviour
+		public List<String> generateLockersInfo(){
+
+		//Business Logic		
+
+		return "....";
+		}
+	}
+
+Note : 
+
+       1.Bean Class/Component Class is different from Java Bean Class because
+       Java Bean Class Methods are just Setter and Getter Methods where Bean/
+       Component Class has Business Methods
+
+       2.Java Compiler has no understanding of Java Bean,POJO,POJI and Component
+	Class because these class standards are provided by programmers and
+	not by Java Compiler
+
+       3.Component Class can either be a POJO or non-POJO Class
+
+       4.Service Class[Class with Business Logics] and DAO Class[Class with Persistence Logic]
+	are examples of Bean Class/Component Class.
+
+Container : Container is a Software Program which manages whole life cycle
+	    of given resource[Class] end to end [from Birth to Death i.e from
+	    Object Creation to Object Destruction]
+
+	Servlet Container --> Manages Life Cycle of Servlet Components
+
+	JSP Container --> Manages Life Cycle of JSP Components
+
+	EJB Container --> Manages Life Cycle of EJB Components
+
+	Spring Container --> Manages Life Cycle of Spring Beans/Components
+
+Note : 1.Servlet/JSP/EJB Containers are heavy weight because they will be 
+	created and activated only when heavy weight(memory,CPU time) Web
+	Server[Tomcat] or Application Server [WebLogic] is started.
+
+       2.Spring Containers are light weight because they can be started without
+	starting Web Server or Application Server.
+
+Spring Bean : 
+
+	1.Java Class whose object is created and managed by Spring Container
+	is Spring Bean
+
+	2.Spring Bean can be 
+			1.Pre-Defined
+			2.User-Defined
+			3.POJO
+			4.Bean/Component
+				Class
+
+	3.Spring Bean cannot be
+			1.Abstract Class
+			2.Interface
+
+	4.To Make Spring Container to Recognize and Manage Life Cycle of
+	certain Java Class as Spring Bean,we need to mark that class in
+	XML File or using Annotations
+
+	XML File
+	---------
+
+		<bean id="dt" class="com.controller.Login">
+
+		Note : 1.value for id attribute becomes "object name" for
+			login Class
+		      
+                       2.Value for class attribute is fully Qualified Name
+			of Spring Bean Class
+
+	Annotations
+	-----------
+
+		In Annotation Environment,we mark Java Class as Spring Bean
+		Using @Component Annotation
+
+		Example:
+
+		@Component("Bank")
+		public class BankOperations{
+		//state
+		
+		//behaviour
+		}
+
+		Note : The Value mentioned in Paranthesis of @Component is
+		Object Name for Spring Bean Class
+
+
+(Session-010)
+Spring Definition:
+
+Spring is 
+	1.Open Source
+	2.Light Weight
+	3.Loosely Coupled
+	4.Non-Invasive
+	5.Aspect Oriented  
+		Framework to develop all types of Java,JEE Applications by
+	getting Abstraction on multiple Java,JEE Technologies.
+
+Open Source : It's source code can be used by people with free of cost.
+
+Light Weight : Spring Framework compes in ZIP File having very less size.
+
+		Spring supplies two built in container which are lightweight
+		containers[we can create,activate spring containers by just
+		creating object for a pre-defined class in any place]
+
+Loosely Coupled : 1.We can develop an Application using Spring App using
+		  some modules and leaving some modules.
+
+		  2.Spring Libraries are given in form of jar files module
+		  wise,so we can add required modules in form jar files
+
+		  3.Spring Framework can be integrated with other
+	          Java Framework and Java/JEE Technologies very easily.
+
+
+	Loosely Coupled Definition : If DOD[Degree of Dependency] between
+	two components is less.
+
+	Eg : Android Phone and Type-C Charger
+
+	Tightly Coupled Definition : If DOD[Degree of Dependency] between
+	two components is more.
+
+	Eg : IPhone and IPhone Charger
+
+Non-Invasive : While Developing Classes in Spring Application,we can 
+	       develop these classes without extending or implementing spring
+		api interface and class,hence Spring Framework is Non-Invasive
+		framework.
+
+	The Classes having Application Logics are Ordinary Classes without
+	having dependency with spring framework apis.So they can be moved to
+	any other framework if needed.
+
+Note : Every RealTime Application has two Logics,
+		
+	1.Primary[Must Required] Logics [Business Logics,Persistence Logics,Presentation Logic,etc]
+
+	2.Secondary[Optional] Logics [Logging,Security,Auditing]
+
+Aspect Oriented : 
+
+	In OOP[Object Oriented Programming] Style Programming we mix up both
+	Primary and Secondary Logics in the Business Methods,hence we face the
+	following limitations,
+		
+	1.There is no clear seperation between Primary and Secondary Logics,
+	because they are mixedup
+
+	2.Modifications done in Secondary Logic affects Primary Logic.
+
+	3.Enabling or disabling the secondary Logic without disturbing the
+	primary Logic isn't possible.	
+
+To Overcome these problems,go for Aspect Oriented Style Programming,
+
+	--> AOP cannot replace OOP,infact AOP Compliments OOp i.e AOP=OOP+
+
+	--> ASPECT in AOP is Secondary Logic
+
+	--> In AOP Style Programming,We Develop both logics in seperate Class
+	and mix them at runtime with help of AOP s/w like SpringAOP,etc...	
+
+	-->SpringAOP generates InMemory Proxy Class(A Class which gets generated
+	,executed and vanished at runtime [from jvm start to end] in JVM memory
+	of RAM)
+
+Advantages of using AOP Style Programming
+
+	1.There is clear seperation between Primary and Secondary Logics.
+
+	2.Modifications done in Secondary Logic doesn't affect Primary Logic.
+
+	3.Enabling or disabling the secondary Logic without disturbing the
+	primary Logic isn't possible.	
+
+	4.It is Industry Standard.
