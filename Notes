@@ -381,7 +381,54 @@ Dependency Injection : Here the Underlying Server/Container/JVM/Framework dynami
 	
 Note : Spring Supports both Dependency Lookup and Dependency Injection.
 
+FAQ : What are the types of Dependency Injection ?
 
+Ans :	1.Setter Injection
+
+	2.Constructor Injection
+	
+	3.Aware Injection / Interface Injection / Context Dependency Lookup
+	
+	4.Lookup Method Injection
+	
+	5.Method Injection/Method Replacer.
+	
+(Session - 012)
+
+Setter Injection : 
+
+	1.Here Spring Container uses setter method to assign/inject Dependent class object to target class object.
+	
+	2.To achieve this,Target Class and Dependent Class must be there in Composition [HAS-A Relationship] i.e target class
+	should have Dependent Class type[HAS-A] Property and a setter method for Dependent Class Type Property.
+	
+	Eg : 
+	
+			Target Class						Dependent Class
+										
+		class A{							class B{
+			
+			private B b;						-----
+										-----
+			public void setB (B b){					-----
+				this.b = b;
+			}							
+										
+		}								}
+
+FAQ : What are the Approaches that we give instructions [configurations] to Spring Container?
+
+Ans :	1.XML Driver Configurations [Legacy]
+
+	2.XML+Annotation Driven Configurations [Legacy - Used in Maintenance Projects]
+	
+	3.100% Code Driven Configurations (All Configs is in Java Code and no xml)
+	
+	4.Spring Boot [All Configs is in Java Code + no XML + Auto Configs + Embedded Servers + Embedded DBs]
+	
+	Note : 3rd and 4th approach is Full of Annotation Driven Configurations
+
+[To Be Contd...]
 		
 	
 
