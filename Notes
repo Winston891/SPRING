@@ -300,3 +300,88 @@ Advantages of using AOP Style Programming
 	primary Logic isn't possible.	
 
 	4.It is Industry Standard.
+	
+(Session - 011)
+
+Spring Beans Dependency Management
+
+	1.Dependency Management : Assigning Dependent [Spring Bean] Class Object to Target[Spring Bean] Class Object.
+	
+	2.Target[Main] Class : Class/Spring Bean which takes support of other Class/Spring Bean
+	
+	3.Dependent Class : Class/Spring Bean which acts as helper to Target[Main] Class.
+	
+	Eg :	1.Flipkart[Target Class] uses DTDC[Dependent Class] to deliver products.
+		2.Vehicle[Target Class] uses Engine[Dependent Class] to move the Vehicle.
+		3.Cricketer[Target Class] uses Bat[Dependent Class] for Batting.
+		
+	4.It's the Spring Container which performs Dependency Management on Spring Beans i.e After Creating Objects for Spring Bean Class
+	Object.The Spring Container automatically assigns/gives Dependent Spring Bean Class Object to Target Spring Bean Class Object.
+	
+	Process using Spring :[Spring Container Does the following Actions]
+	
+		1.Loads Target and Dependent Classes
+		
+		2.Creates Objects for Target and Dependent Class
+		
+		3.Injects Dependent Class object to target class object.
+		
+		4.Manages Objects of Dependent and Target Class and calls life cycle methods if available
+		
+		5.Destroys Objects of Target and Dependent Class.
+	
+	Process Using Core Java :[Developer does the following Actions]
+	
+		1.Indirectly Loads Target and Dependent Classes
+		
+		2.Creates Objects for Target and Dependent Class using new operator
+		
+		3.Assigns Dependent Class object to target class object.
+		
+		4.Manages Objects of Dependent and Target Class.
+		
+		5.Deferences Objects of Target and Dependent Class to prepare them for Garbage Collection.
+		
+	Note : Dependency Management Instructions can be provided either by using XML or Annotations
+	
+FAQ : What are the two modes of Dependency Management?
+
+Ans : 1.Dependency Lookup
+
+      2.Dependency Injection
+      
+Dependency Lookup : Here Target class spends time and logic to search and get Dependent Class Object from Different Places i.e Target 
+		    Class Pulls Dependent Class Object.
+		   
+	Example : 1. Student[Target] request for Course Material [Dependent] in order to get them.
+	
+	[To Be Written]
+	
+	Pros : Target Class can spend time and logic to get only required Dependent Class Object.
+	
+	Cons : Target Class has to write logics by taking burden to search and get Dependent Class Object.
+	
+Dependency Injection : Here the Underlying Server/Container/JVM/Framework dynamically assigns/injects Dependent Class Object to Target
+		       Class Object i.e Dependent Class Object is pushed to Target Class Object by underlying Server/Container/JVM
+		       /Framework.
+		       
+	Example : 1. Student[Target] is assigned/injected with Course Material[Dependent] Automatically By Institute at the moment he
+		    registered for the course.
+		    
+		  2. JVM Assigns/Injects Default/Initial values[Dependent] to Object[Target] by executing Constructor when Object gets
+		    created.
+		    
+		  3. Servlet Container Dynamically Assigns/Injects ServletConfig Object to User Defined Servlet CLass Object when 
+		  servlet class object gets created
+	
+	Pros : Target Class doesn't spend time and logic to get Dependent Class Object because Underlying Server/Container/JVM/
+	Framework automatically injects dependent class object to Dependent Class Object.
+	
+	Cons :  Underlying Server/Container/JVM/Framework injects Both Necessary and Un-necessary Objects.
+	
+Note : Spring Supports both Dependency Lookup and Dependency Injection.
+
+
+		
+	
+
