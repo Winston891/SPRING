@@ -464,6 +464,53 @@ Setter Injection Sample Code using XML Driven Configurations
 		
 		ref --> To Refer a Bean using its id
 		
-Note : Generally <bean> tag with <property> tag or <constructor-arg> is used to configure Java Class as Target Spring Bean Class
+Note : Generally <bean> tag with <property> tag or <constructor-arg> is used to configure Java Class as Target Spring Bean Class.
+
+(Session - 014)
+
+Basics of XML(Extensible Markup Language)
+
+	1.It's a Tag based Languaged
+	
+	2.They are Strictly Typed [HTML are loosely typed]
+	
+	3.XML are used to define and display data.[HTML are used to display data with or without using styles]
+	
+	4.XML tags are Case-Sensitive [HTML tags are case-in sensitive]
+	
+	5.XML Tags are Paired Tags (Every Opening Tag has a Closing Tag)
+	
+	6.Attribute value of an XML Tag must be quoted [Either single quote or double quote]
+	
+	7.The First Tag in XML --> Root Tag.Entire XML Document should be defined between the opening tag and closing tag of root tag.
+	
+FAQ : What is a "well-formed" XML Document?
+
+Ans : If an XML Document follows XML Syntax Rules,then that Document is said to be an well-formed XML Document.
+
+Note :	1.Technology/Framework vendors provide Certain Rules in the form of DTD[Document Type Definition(Old)] or 
+	XSD[XML Schema Definition(New)] Documents to make developers use same tags,attributes and structure to construct XML Document
+	for Application Developement
+	
+	2.DTD/XSD Documents are provided in the form of .dtd/.xsd file.Developers has to import the DTD/XSD rules to xml files
+	in order to develop the XML File based on the imported XSD/DTD Rules.
+	
+	3.XSD/DTD are the building blocks of XML Documents.
+	
+	4.If XML Document follows imported XSD/DTD rules then it is known as "Valid" XML Documents.
+	
+FAQ : What are the Content Present XSD/DTD Document?
+
+Ans :	1.Allowed Tags.
+
+	2.Allowed Attributes in Each Tag.
+
+	3.Structure of Tags[Order]
+	
+	4.etc
+	
+	TBC
+       
+	
 	
 
