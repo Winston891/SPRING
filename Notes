@@ -428,7 +428,42 @@ Ans :	1.XML Driver Configurations [Legacy]
 	
 	Note : 3rd and 4th approach is Full of Annotation Driven Configurations
 
-[To Be Contd...]
+Setter Injection Sample Code using XML Driven Configurations
+
+	Note : Refer Above Java Code
+	
+	Providing XML Instructions:
+	
+		1.The File name for xml file can be any name. Recommended --> applicationContext.xml
 		
+		2.XML File Name must be specified while creating the spring container.
+		
+		Important Tags 
+		
+			1.<beans> --> root tag
+			
+			2.<bean> --> To Configure Java Class as a Spring Bean
+			
+			3.<property> --> To Configure Property of Spring Bean for Setter Injection
+			
+			4.<constructor-arg> --> Enables Constructor Injection
+		
+	applicationContext.xml
+	----------------------
+	
+		<beans ....[XSD]>
+			<bean id="dt" class="java.util.Date"/> <!--Dependent Class Cfg-->
+			<bean id="wmg" class="com.example.WishMessageGenerator"> <!--Target Class Cfg-->
+				<property name="date" ref="dt"> <!-- cfg 'date' property for setter injection-->
+			</bean>
+		</beans>
+		
+	Note :	id --> To Provide object name for the given class
+	
+	     	property --> Name of the variable in the given class
+		
+		ref --> To Refer a Bean using its id
+		
+Note : Generally <bean> tag with <property> tag or <constructor-arg> is used to configure Java Class as Target Spring Bean Class
 	
 
