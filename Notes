@@ -466,7 +466,7 @@ Setter Injection Sample Code using XML Driven Configurations
 		
 Note : Generally <bean> tag with <property> tag or <constructor-arg> is used to configure Java Class as Target Spring Bean Class.
 
-(Session - 014)
+(Session - 013)
 
 Basics of XML(Extensible Markup Language)
 
