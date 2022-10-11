@@ -1,0 +1,21 @@
+(Session - 002)
+FAQ : What are Restful Services?
+
+Ans : They are an adoption/implementation of Distributed Technology Designed on the basis of Architectural Principles.
+
+FAQ : Define the Term and the purpose of "Distributed Technology"?
+
+Ans : 
+    1.Generally the word "Distributed" means an entity which is accessible globally.
+    2.Software Applications built using Distributed Technology can be accessed via the internet from any where in the world.
+    3.Earlier Applications were standalone,so users have to install them in their device and use them.
+
+FAQ : Mention some reasons for building Apps using Distributed Technologies?
+
+Ans : 
+
+  1.Higer Throughput : No.of.activites[functionalities] getting completed in a given amount of time.
+  2.Quick Turn around time : Time Required to complete the activity must be less
+  3.Higher Availability and Utilization of Resources
+  4.Exposure of Business Services across the network.
+    
