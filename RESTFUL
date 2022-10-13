@@ -23,4 +23,24 @@ Ans :
 
 Summary : Assigning activity to multiple skilled resources with sophisticated tools and environment can enable the resources to complete the
           activity in optimized span of time.
+          
+(Session - 004)
+
+Question : What are the Factors/Situations influence us to Build Apps based on Distributed Techs?
+
+Ans : 
+
+    1.If we want to reduce Turn Around Time for Completing a Job.
+    
+    2.If we want higher through-put.
+    
+    3.If we want to build high Responsive and More Accurate Systems
+    
+    4.If we want resources to be utilized effectively and available all the time.
+    
+Question : How does the application looks like when we build them using distributed technology?
+
+Ans : We are going to use predefined api provided by language for network communication,db communication,etc....
+    
+    
     
