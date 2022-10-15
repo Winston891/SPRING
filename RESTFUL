@@ -55,6 +55,27 @@ FAQ : What are Web Services/Restful Services?
 
 Ans : Representing Complex Business Logic in the form of Distributed and Inter-Operable Manner is Web Services or Restful Services.
 
+(Session - 008)
+
+Qn : Why it is impossible for American Express to build thier own business system for Insurance Domain?
+
+Ans : 1.Lack of Domain Knowledge.Hence Stragies are unknown.
+      2.Since it is a complex business system , hence the investment and maintenance cost will be high and may not be profitable.
+      
+Qn : What are the issues if American Express shares Religare[Parter] generated policy information to the Customer?
+
+Ans : 1.Customer will realize that insurance are under taken by Religare and not by American Express.
+      2.American Express has no idea about policy information hence Reconcilation of Information will be difficult.
+      3.Hence Tracing Policies and providing services to customer will be impossible
+  
+Qn : Mention the Challenges involved in Managing Data Manually using Two Business?
+
+Ans : 1.Injection of Duplicate Data by both the systems
+      2.Injection of In-correct Data in Systems.Hence Tracing and Reconcilation would be difficult or highly impossible.Data Inconsistency
+        problem.
+      3.Fraud Elimination is very difficult.
+      4.More Man Power Resources required.
+
 
     
     
